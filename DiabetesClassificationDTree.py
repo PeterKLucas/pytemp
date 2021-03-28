@@ -52,7 +52,7 @@ for i in dataset.Outcome.values:
 X = dataset.drop(['Outcome'], axis=1)
 y = dataset['Outcome']
 
-## done another way using variable names
+## done another way using variable names explicitly
 X_var = dataset[['SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']].values # independent variable
 y_var = dataset['Outcome'].values # dependent variable
 
@@ -82,4 +82,5 @@ plot_tree(model,
           filled = True, 
           rounded = True)
 
+plt.show()
 plt.savefig('tree_visualization.png') 
