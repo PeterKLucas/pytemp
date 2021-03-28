@@ -41,6 +41,13 @@ print("\n ***************************** \n")
 print(f"Number of Duplicate values :- {len(dataset.loc[dataset.duplicated()])}")
 
 
+for i in dataset.Outcome.values:
+    if i  == 1:
+        dataset.Outcome.replace(i, 'TRUE', inplace = True)
+    else:
+        dataset.Outcome.replace(i, 'FALSE', inplace = True)
+
+
 ## separate dataset of independent and dependent variables
 X = dataset.drop(['Outcome'], axis=1)
 y = dataset['Outcome']
@@ -54,45 +61,25 @@ print(cl('Y variable samples : {}'.format(y_var[:5]), attrs = ['bold']))
 
 # split dataset into train and test datasets
 
-X_train, X_test, y_train, y_test = train_test_split(X_var, y_var, test_size = 0.2, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X_var, y_var, test_size = 0.3, random_state = 0)
 
-print(cl('X_train shape : {}'.format(X_train.shape), attrs = ['bold'], color = 'black'))
-print(cl('X_test shape : {}'.format(X_test.shape), attrs = ['bold'], color = 'black'))
-print(cl('y_train shape : {}'.format(y_train.shape), attrs = ['bold'], color = 'black'))
-print(cl('y_test shape : {}'.format(y_test.shape), attrs = ['bold'], color = 'black'))
-X_train, X_test, y_train, y_test = train_test_split(X, y , test_size = 0.1, random_state=42)
 
-print(f"Size Of The Train Dataset :- {len(X_train)}")
-print(f"Size Of The Test Dataset :- {len(X_test)}")
 
-train_scores = []
-test_scores = []
+model = dtc(criterion = 'entropy', max_depth = 4)
+model.fit(X_train, y_train)
 
-for i in range(1, 25):
-  knn_clf = KNeighborsClassifier(n_neighbors=i)
-  knn_clf.fit(X_train, y_train)
+pred_model = model.predict(X_test)
 
-  train_scores.append(knn_clf.score(X_train, y_train))
-  test_scores.append(knn_clf.score(X_test, y_test))
+print(cl('Accuracy of the model is {:.0%}'.format(accuracy_score(y_test, pred_model)), attrs = ['bold']))
 
-print(f"Max score of Train dataset at K = {train_scores.index(max(train_scores)) + 1} and score :- {max(train_scores)*100}%")
-print(f"Max score of Test dataset at K = {test_scores.index(max(test_scores)) + 1} and score :- {round(max(test_scores)*100, 2)}%")
 
-## training history graph 
-plt.figure(figsize=(12,5))
-p = sns.lineplot(range(1,25),train_scores,marker='*',label='Train Score')
-p = sns.lineplot(range(1,25),test_scores,marker='o',label='Test Score')
+feature_names = dataset.columns[:5]
+target_names = dataset['Outcome'].unique().tolist()
 
-## best score on test data at k = 5
+plot_tree(model, 
+          feature_names = feature_names, 
+          class_names = target_names, 
+          filled = True, 
+          rounded = True)
 
-knn_clf = KNeighborsClassifier(n_neighbors=5)
-knn_clf.fit(X_train, y_train)
-
-## predict X_test 
-y_pred = knn_clf.predict(X_test)
-print("\n ***************************** \n")
-print(f"Accuracy :- \n {accuracy_score(y_test, y_pred)*100}")
-print("\n ***************************** \n")
-print(f"Confusion Matrix :- \n{confusion_matrix(y_test, y_pred)}")
-print("\n ***************************** \n")
-print(f"Classification Report :- \n {classification_report(y_test, y_pred)}")
+plt.savefig('tree_visualization.png') 
