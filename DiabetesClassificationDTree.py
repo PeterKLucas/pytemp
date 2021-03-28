@@ -1,4 +1,3 @@
-
 import pandas as pd                 # data processing
 import numpy as np                  # working with arrays
 import matplotlib.pyplot as plt     # visualization
@@ -46,16 +45,21 @@ print(f"Number of Duplicate values :- {len(dataset.loc[dataset.duplicated()])}")
 X = dataset.drop(['Outcome'], axis=1)
 y = dataset['Outcome']
 
-col_names = list(X.columns)
-## craete pipe line with feature scaling
-pipeline = Pipeline([
-                     ('std_scale', PowerTransformer(method='yeo-johnson'))
-])
+## done another way using variable names
+X_var = dataset[['SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']].values # independent variable
+y_var = dataset['Outcome'].values # dependent variable
 
-X = pd.DataFrame(pipeline.fit_transform(X), columns=col_names)
+print(cl('X variable samples : {}'.format(X_var[:5]), attrs = ['bold']))
+print(cl('Y variable samples : {}'.format(y_var[:5]), attrs = ['bold']))
 
-print(X.head())
-## split dataset into train and test datasets
+# split dataset into train and test datasets
+
+X_train, X_test, y_train, y_test = train_test_split(X_var, y_var, test_size = 0.2, random_state = 0)
+
+print(cl('X_train shape : {}'.format(X_train.shape), attrs = ['bold'], color = 'black'))
+print(cl('X_test shape : {}'.format(X_test.shape), attrs = ['bold'], color = 'black'))
+print(cl('y_train shape : {}'.format(y_train.shape), attrs = ['bold'], color = 'black'))
+print(cl('y_test shape : {}'.format(y_test.shape), attrs = ['bold'], color = 'black'))
 X_train, X_test, y_train, y_test = train_test_split(X, y , test_size = 0.1, random_state=42)
 
 print(f"Size Of The Train Dataset :- {len(X_train)}")
