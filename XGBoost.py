@@ -8,12 +8,14 @@ from sklearn.preprocessing import MinMaxScaler  # pre processing
 
 
 
-## separate dataset of independent and dependent variables
-X_var = dataset.drop(['Outcome'], axis=1)
-y_var = dataset['Outcome']
+
 
 df = pd.read_csv('C:\pytemp\stroke\healthcare-dataset-stroke-data.csv')
 print(df)
+
+## separate dataset of independent and dependent variables
+X_var = df.drop(['stroke'], axis=1)
+y_var = df['stroke']
 
 # split dataset into train and test datasets
 from sklearn.model_selection import train_test_split    # splitting the data
