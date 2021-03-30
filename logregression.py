@@ -13,14 +13,14 @@ dataset = pd.read_csv('C:\pytemp\diabetes\diabetes.csv')
 print(dataset.info())
 
 print(f"shape of the Diabetes dataset :- {dataset.shape}")
-print("\n ***************************** \n")
+print("\n ------------------------------------\n")
 print(f"Sample Dataset :- \n {dataset.head()}")
 ## null values checking 
-print("\n ***************************** \n")
-print(f"checking for null values :- \n {dataset.isnull().sum()}")
-print("\n ***************************** \n")
+print("\n ------------------------------------\n")
+print(f"null values :- \n {dataset.isnull().sum()}")
+print("\n ------------------------------------\n")
 ## checking for whether dataset have duplicate values or not
-print(f"Number of Duplicate values :- {len(dataset.loc[dataset.duplicated()])}")
+print(f"Duplicate values :- {len(dataset.loc[dataset.duplicated()])}")
 
 # Scale values
 
