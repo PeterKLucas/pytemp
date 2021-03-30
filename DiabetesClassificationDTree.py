@@ -49,12 +49,15 @@ for i in dataset.Outcome.values:
 
 
 ## separate dataset of independent and dependent variables
-X = dataset.drop(['Outcome'], axis=1)
-y = dataset['Outcome']
+X_var = dataset.drop(['Outcome'], axis=1)
+y_var = dataset['Outcome']
+
+print(X_var)
 
 ## done another way using variable names explicitly
-X_var = dataset[['SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']].values # independent variable
-y_var = dataset['Outcome'].values # dependent variable
+#X_var = dataset[['Pregnancies','Glucose','BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']].values # independent variable
+#y_var = dataset['Outcome'].values # dependent variable
+
 
 print(cl('X variable samples : {}'.format(X_var[:5]), attrs = ['bold']))
 print(cl('Y variable samples : {}'.format(y_var[:5]), attrs = ['bold']))
@@ -73,7 +76,7 @@ pred_model = model.predict(X_test)
 print(cl('Accuracy of the model is {:.0%}'.format(accuracy_score(y_test, pred_model)), attrs = ['bold']))
 
 
-feature_names = dataset.columns[:5]
+feature_names = dataset.columns[:10]
 target_names = dataset['Outcome'].unique().tolist()
 
 plot_tree(model, 
