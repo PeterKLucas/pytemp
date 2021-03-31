@@ -15,7 +15,7 @@ from termcolor import colored as cl # text customization
 # Simple and efficient tools for data mining and data analysis
 #-------------------------------------------------------------#
 
-from sklearn.tree import DecisionTreeClassifier as dtc          # tree algorithm
+from sklearn.tree import DecisionTreeClassifier as dtc          # alg
 from sklearn.model_selection import train_test_split            # splitting the data
 from sklearn.metrics import accuracy_score                      # model accuracy
 from sklearn.tree import plot_tree                              # tree diagram

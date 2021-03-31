@@ -24,8 +24,7 @@ for dirname, _, filenames in os.walk('C:\pytemp\diabetes'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 
-
-
+#Import the CSV file
 
 dataset = pd.read_csv('C:\pytemp\diabetes\diabetes.csv')
 
