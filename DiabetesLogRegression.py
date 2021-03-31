@@ -1,4 +1,9 @@
 #-------------------------------------------------------------#
+# Create and evaluate a Logistic regression based model regarding
+# predicting diabetes based on 8 input variables
+#-------------------------------------------------------------#
+
+#-------------------------------------------------------------#
 # imports
 #-------------------------------------------------------------#
 import pandas as pd                             # data processing
@@ -24,6 +29,9 @@ from sklearn.metrics import accuracy_score              # model precision
 #-------------------------------------------------------------#
 df = pd.read_csv('C:\pytemp\diabetes\diabetes.csv')
 
+#-------------------------------------------------------------#
+# Explore and prepare diabetes dataset 
+#-------------------------------------------------------------#
 print(df.info())
 #-------------------------------------------------------------#
 # check the shape
@@ -97,7 +105,7 @@ logmodel=LogisticRegression(solver='liblinear')
 logmodel.fit(x_train,y_train)
 
 #-------------------------------------------------------------#
-#evaluating model performance
+#evaluate model performance
 #-------------------------------------------------------------#
 pred_model=logmodel.predict(X_test)
 

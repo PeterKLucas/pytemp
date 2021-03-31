@@ -1,4 +1,12 @@
 #-------------------------------------------------------------#
+# 
+#
+# Create and evaluate a DecisionTree based model regarding
+# predicting diabetes based on 8 input variables
+#-------------------------------------------------------------#
+
+
+#-------------------------------------------------------------#
 # imports
 #-------------------------------------------------------------#
 import pandas as pd                 # data processing
@@ -34,6 +42,10 @@ for dirname, _, filenames in os.walk('C:\pytemp\diabetes'):
 # Import the csv
 #-------------------------------------------------------------#
 df = pd.read_csv('C:\pytemp\diabetes\diabetes.csv')
+
+#-------------------------------------------------------------#
+# Explore and prepare diabetes dataset 
+#-------------------------------------------------------------#
 
 print(df.info())
 #-------------------------------------------------------------#
