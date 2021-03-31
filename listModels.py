@@ -28,18 +28,6 @@ for dirname, _, filenames in os.walk('C:\pytemp\diabetes'):
 
 dataset = pd.read_csv('C:\pytemp\diabetes\diabetes.csv')
 
-print(dataset.info())
-
-print(f"shape of the Diabetes dataset :- {dataset.shape}")
-print("\n ***************************** \n")
-print(f"Sample Dataset :- \n {dataset.head()}")
-## null values checking 
-print("\n ***************************** \n")
-print(f"checking for null values :- \n {dataset.isnull().sum()}")
-print("\n ***************************** \n")
-## checking for whether dataset have duplicate values or not
-print(f"Number of Duplicate values :- {len(dataset.loc[dataset.duplicated()])}")
-
 
 #for i in dataset.Outcome.values:
  #   if i  == 'X':
@@ -76,7 +64,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score, ConfusionMatrixDisplay, precision_score, recall_score, f1_score, classification_report, roc_curve, plot_roc_curve, auc, precision_recall_curve, plot_precision_recall_curve, average_precision_score
 from sklearn.model_selection import cross_val_score
 
-
+#-------------------------------------------------------------#
+# create a list of model type
+# append an instance of several compatible alg
+#-------------------------------------------------------------#
 models = []
 #models.append(['Logistic Regreesion', LogisticRegression(random_state=0)])
 #models.append(['SVM', SVC(random_state=0)])
@@ -90,39 +81,14 @@ models.append(['Random Forest', RandomForestClassifier(random_state=0)])
 lst_1= []
 
 for m in range(len(models)):
-    lst_2= []
+    #lst_2= []
     model = models[m][1]
     model.fit(x_train, y_train)
     y_pred = model.predict(x_test)
-    cm = confusion_matrix(y_test, y_pred)  #Confusion Matrix
-    accuracies = cross_val_score(estimator = model, X = x_train, y = y_train, cv = 10)   #K-Fold Validation
-    roc = roc_auc_score(y_test, y_pred)  #ROC AUC Score
-    precision = precision_score(y_test, y_pred)  #Precision Score
-    recall = recall_score(y_test, y_pred)  #Recall Score
-    f1 = f1_score(y_test, y_pred)  #F1 Score
+  
     print(models[m][0],':')
-    print(cm)
-    print('Accuracy Score: ',accuracy_score(y_test, y_pred))
+    
+    print('Accuracy1 Score: ',accuracy_score(y_test, y_pred))
     print('')
-    print("K-Fold Validation Mean Accuracy: {:.2f} %".format(accuracies.mean()*100))
-    print('')
-    print("Standard Deviation: {:.2f} %".format(accuracies.std()*100))
-    print('')
-    print('ROC AUC Score: {:.2f}'.format(roc))
-    print('')
-    print('Precision: {:.2f}'.format(precision))
-    print('')
-    print('Recall: {:.2f}'.format(recall))
-    print('')
-    print('F1: {:.2f}'.format(f1))
     print('-----------------------------------')
     print('')
-    lst_2.append(models[m][0])
-    lst_2.append((accuracy_score(y_test, y_pred))*100) 
-    lst_2.append(accuracies.mean()*100)
-    lst_2.append(accuracies.std()*100)
-    lst_2.append(roc)
-    lst_2.append(precision)
-    lst_2.append(recall)
-    lst_2.append(f1)
-    lst_1.append(lst_2)
