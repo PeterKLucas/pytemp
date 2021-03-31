@@ -80,6 +80,12 @@ df["Residence_type"]=lb.fit_transform(df["Residence_type"])
 df["smoking_status"]=lb.fit_transform(df["smoking_status"])
 df["gender"]=lb.fit_transform(df["gender"])
 
+
+#-------------------------------------------------------------#
+# sample again
+#-------------------------------------------------------------#
+print(f"Sample df :- \n {df.head()}\n")
+
 #-------------------------------------------------------------#
 # separate dataset of independent and dependent variables
 #-------------------------------------------------------------#
