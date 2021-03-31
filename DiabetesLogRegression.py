@@ -77,13 +77,13 @@ y = df['Outcome']
 #-------------------------------------------------------------#
 # done another way using variable names explicitly
 #-------------------------------------------------------------#
-X_var = df[['Pregnancies','Glucose','BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']].values # independent variable
+x_var = df[['Pregnancies','Glucose','BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']].values # independent variable
 y_var = df['Outcome'].values # dependent variable
 
 #-------------------------------------------------------------#
 # Show the variable samples
 #-------------------------------------------------------------#
-print(cl('X variable samples : {}'.format(X_var[:5]), attrs = ['bold']))
+print(cl('X variable samples : {}'.format(x_var[:5]), attrs = ['bold']))
 print(cl('Y variable samples : {}'.format(y_var[:5]), attrs = ['bold']))
 
 
@@ -94,7 +94,7 @@ print(cl('Y variable samples : {}'.format(y_var[:5]), attrs = ['bold']))
 #-------------------------------------------------------------#
 
 
-x_train, X_test, y_train, y_test = train_test_split(X_var, y_var, test_size = 0.3, random_state = 0)
+x_train, X_test, y_train, y_test = train_test_split(x_var, y_var, test_size = 0.3, random_state = 0)
 
 
 
