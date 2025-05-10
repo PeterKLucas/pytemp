@@ -6,7 +6,7 @@ import pandas as pd                 # data processing
 import numpy as np                  # working with arrays
 import matplotlib.pyplot as plt     # visualization
 from matplotlib import rcParams     # figure size
-
+from termcolor import colored as cl # text formatting
 
 #-------------------------------------------------------------#
 #scikit-learn
