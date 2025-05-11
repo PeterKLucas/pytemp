@@ -30,3 +30,59 @@ Runtime Error
 [0m16:33:29.131092 [debug] [MainThread]: Command `dbt init` failed at 16:33:29.131092 after 0.22 seconds
 [0m16:33:29.131092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04EAB100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06882898>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0692E0E8>]}
 [0m16:33:29.131092 [debug] [MainThread]: Flushing usage events
+[0m17:32:41.125672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04EBE130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0690C6B8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0690C6E8>]}
+
+
+============================== 17:32:41.131212 | 438f2c86-c969-45e2-b883-b03724cd7cfb ==============================
+[0m17:32:41.131212 [info ] [MainThread]: Running with dbt=1.8.7
+[0m17:32:41.131212 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'invocation_command': 'dbt init my_project', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\peter\\.dbt', 'version_check': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'debug': 'False', 'log_path': 'logs', 'log_cache_events': 'False', 'warn_error': 'None', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'empty': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:32:41.150569 [info ] [MainThread]: A project called my_project already exists here.
+[0m17:32:41.152646 [debug] [MainThread]: Command `dbt init` succeeded at 17:32:41.151524 after 0.10 seconds
+[0m17:32:41.152646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04EBE130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0699F940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x066D8C10>]}
+[0m17:32:41.154182 [debug] [MainThread]: Flushing usage events
+[0m17:50:36.669696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04E9BB98>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x05DB94D8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x05D8E400>]}
+
+
+============================== 17:50:36.687082 | ee980827-7640-4a1a-a0d7-056e282313f8 ==============================
+[0m17:50:36.687082 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m17:50:36.687082 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'invocation_command': 'dbt init my_project', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\peter\\.dbt', 'version_check': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error': 'None', 'debug': 'False', 'log_path': 'logs', 'log_format': 'default', 'static_parser': 'True', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'empty': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:50:36.845623 [info ] [MainThread]: A project called my_project already exists here.
+[0m17:50:36.847853 [debug] [MainThread]: Command `dbt init` succeeded at 17:50:36.845623 after 0.25 seconds
+[0m17:50:36.848392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04E9BB98>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x05DB9358>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x061237C0>]}
+[0m17:50:36.848392 [debug] [MainThread]: Flushing usage events
+[0m17:50:37.073031 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:55:49.906341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0543ABE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0632D658>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0632D580>]}
+
+
+============================== 17:55:49.906341 | 592fc4e2-010e-4e07-a975-d54088a67bc6 ==============================
+[0m17:55:49.906341 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m17:55:49.906341 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'invocation_command': 'dbt init my_project', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\peter\\.dbt', 'version_check': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'empty': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:55:49.930121 [info ] [MainThread]: A project called my_project already exists here.
+[0m17:55:49.930121 [debug] [MainThread]: Command `dbt init` succeeded at 17:55:49.930121 after 0.10 seconds
+[0m17:55:49.933058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0543ABE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x066C8808>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06647D48>]}
+[0m17:55:49.933596 [debug] [MainThread]: Flushing usage events
+[0m17:55:50.246282 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:36:23.218463 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x049E3250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x062E08C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x062ECA60>]}
+
+
+============================== 18:36:23.218463 | fd4757b7-8d60-4898-aaa0-afa84e72c5fa ==============================
+[0m18:36:23.218463 [info ] [MainThread]: Running with dbt=1.8.1
+[0m18:36:23.218463 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'invocation_command': 'dbt build', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\peter\\.dbt', 'cache_selected_only': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:36:23.218463 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\pytemp\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:36:23.234087 [debug] [MainThread]: Command `dbt build` failed at 18:36:23.234087 after 0.08 seconds
+[0m18:36:23.234087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x049E3250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x062EC838>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x063E0898>]}
+[0m18:36:23.235397 [debug] [MainThread]: Flushing usage events
+[0m18:37:36.665835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04771268>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06070C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x060809A0>]}
+
+
+============================== 18:37:36.681345 | ee2f7293-9ebc-4098-bc0e-e9c2e2dbcce5 ==============================
+[0m18:37:36.681345 [info ] [MainThread]: Running with dbt=1.8.1
+[0m18:37:36.681345 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init my_project', 'printer_width': '80', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\peter\\.dbt', 'version_check': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error': 'None', 'debug': 'False', 'log_path': 'logs', 'static_parser': 'True', 'log_format': 'default', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:37:36.723108 [info ] [MainThread]: A project called my_project already exists here.
+[0m18:37:36.723108 [debug] [MainThread]: Command `dbt init` succeeded at 18:37:36.723108 after 0.12 seconds
+[0m18:37:36.725553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04771268>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06070C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0617EBE0>]}
+[0m18:37:36.726092 [debug] [MainThread]: Flushing usage events
