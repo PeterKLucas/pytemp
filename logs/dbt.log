@@ -238,3 +238,24 @@ Runtime Error
 [0m13:28:57.026497 [debug] [MainThread]: Command `dbt clean` failed at 13:28:57.026497 after 0.09 seconds
 [0m13:28:57.026497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04B65268>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06560670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06560FE8>]}
 [0m13:28:57.026497 [debug] [MainThread]: Flushing usage events
+[0m13:41:41.011937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04A24238>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x063218B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06331A18>]}
+
+
+============================== 13:41:41.017581 | be7b9666-dec1-45c8-8149-6950100a822c ==============================
+[0m13:41:41.017581 [info ] [MainThread]: Running with dbt=1.8.1
+[0m13:41:41.017581 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'printer_width': '80', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\peter\\.dbt', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error': 'None', 'debug': 'False', 'log_path': 'logs', 'static_parser': 'True', 'log_format': 'default', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:41:41.039584 [info ] [MainThread]: dbt version: 1.8.1
+[0m13:41:41.039584 [info ] [MainThread]: python version: 3.8.6
+[0m13:41:41.039584 [info ] [MainThread]: python path: C:\pytemp\venv\Scripts\python.exe
+[0m13:41:41.039584 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m13:41:41.243471 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m13:41:41.243909 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m13:41:41.322913 [info ] [MainThread]: Using profiles dir at C:\Users\peter\.dbt
+[0m13:41:41.324647 [info ] [MainThread]: Using profiles.yml file at C:\Users\peter\.dbt\profiles.yml
+[0m13:41:41.324647 [info ] [MainThread]: Using dbt_project.yml file at C:\pytemp\dbt_project.yml
+[0m13:41:41.324647 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:41:41.327013 [debug] [MainThread]: Command `dbt debug` failed at 13:41:41.327013 after 0.39 seconds
+[0m13:41:41.328071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x04A24238>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x06331820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x064396B8>]}
+[0m13:41:41.328071 [debug] [MainThread]: Flushing usage events
